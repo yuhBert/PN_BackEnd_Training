@@ -73,9 +73,22 @@
     text-align: center;
     }
     </style>
+
+    <?php
+    
+        session_start();
+        // print_r($_SESSION);
+        //session_destroy();
+        // print_r($_SESSION);
+         if(isset($_SESSION['login'])){
+            //  print_r($_SESSION);
+            header("Location:yAddStudent(01-16-20).php");
+         }
+    
+    ?>
     <body>
     <br><br>
-        <form class="form" action="" method="post">
+        <form class="form" action="yRetrieve(01-16-20).php" method="post">
             <div class="container">
                 <h1>Sign In</h1>
                 <hr>
@@ -88,7 +101,7 @@
                 <hr>
 
                 <div class="clearfix">
-                <button type="submit" class="submit">Sign In</button>
+                <button type="submit" name ="login" class="submit">Sign In</button>
                 </div>
                 
                 <div class="container signin">

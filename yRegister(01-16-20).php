@@ -74,21 +74,21 @@
     }
     </style>
     <body>
-
+    
         <form class="form" action="yInsertAccount(01-16-20).php" method="post">
-       
+        
             <div class="container">
                 <h1>Sign Up</h1>
                 <hr>
-
+                
                 <label><b>User Name</b></label>
-                <input class="input"  type="text" placeholder="Enter User Name" name="username" value="" require>
+                <input class="input"  type="text" placeholder="Enter User Name" name="username" value="" required>
 
                 <label><b>Email</b></label>
-                <input class="input" type="text" placeholder="Enter Email" name="email" value="" require>
+                <input class="input" type="text" placeholder="Enter Email" name="email" value="" required>
 
                 <label><b>Password</b></label>
-                <input class="input" type="password" placeholder="Enter Password" name="password"value="" require>
+                <input class="input" type="password" placeholder="Enter Password" name="password"value="" required>
                 <hr>
                 <div class="clearfix">
                 <button type="submit" name="submit" class="submit">Sign Up</button>
