@@ -1,3 +1,10 @@
+<?php
+    if (isset( $_SESSION["logged_in"])) {
+        if ( $_SESSION["logged_in"]) {
+            header("Location:yAddStudent(01-16-20).php");
+        }
+    }
+?>
 <!DOCTYPE html>
     <html>
     
@@ -76,14 +83,6 @@
 
     <?php
     
-        session_start();
-        // print_r($_SESSION);
-        //session_destroy();
-        // print_r($_SESSION);
-         if(isset($_SESSION['login'])){
-            //  print_r($_SESSION);
-            header("Location:yAddStudent(01-16-20).php");
-         }
     
     ?>
     <body>

@@ -1,30 +1,50 @@
 <?php
- session_start();
- $db = mysqli_connect('localhost', 'root', '', 'pntraining');
+    session_start();
+    // // session_destroy();
+    
+    // if(!isset($_SESSION['username'])) {
+    //     $_SESSION['username'] = $_POST['username'];
+    //     echo $_SESSION['username'];
+    // } else {
+    //     session_unset();
+    // }
 
-
- if (isset($_POST['login'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    $sql_u = "SELECT * FROM users WHERE username='$username'";
-    $res_u = mysqli_query($db, $sql_u);
-  
-    if (mysqli_num_rows($res_u) > 0 ) {
-       $test = mysqli_fetch_array($res_u);
-    //    echo $test['password'];
-       if($test['password'] == $password){
-           $_SESSION['login'] = 1;
-         header("Location:yAddStudent(01-16-20).php");
-       }else{
-        $message = "incorrect password  ";
-        echo "<script type='text/javascript'>alert('$message');</script>";
-       }
-    }else{
-        
-        header("Location:yLogin(01-16-20).php");
-        exit();
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "pntraining";
+    // Creating connection
+    $conn = mysqli_connect($servername, $username, $password, $database);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
-}
-mysqli_close($db);
+    $login = false;
+    if(isset($_POST['login'])) {
+        $name = $_POST['username'];
+        $pass = $_POST['password'];
+        $query = "SELECT username, password FROM users WHERE username='".$name."'";
+        if($result = $conn->query($query)) {
+            if (mysqli_num_rows($result) > 0) {
+                $user_data = mysqli_fetch_array($result);
+                if($user_data['username'] === $name && $user_data['password'] === $pass) {
+                    // $login = true;
+                    $_SESSION["logged_in"]=true;
+                    $_SESSION["user"]=$user_data["id"];
+                    header("Location:yAddStudent(01-16-20).php");
+                }else {
+                    $login = false;
+                    $_SESSION["logged_in"]=false;
+
+                    echo "Error 404!";
+                }
+            }else {
+                $message = "No result found! We are not able to find your account. Try loging in again";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+                header("refresh:0.5; url=yLogin(01-16-20).php");
+            }
+        }   
+    }
+    exit();
+    $conn->close();
 ?>
