@@ -97,7 +97,7 @@
                     }
                     mysqli_free_result($result);  
                 } else{
-                    echo "No records matching your query were found.";
+                    echo "<h1 style='text-align:center'>No  Records Were Found</h1>";
                 }
             } else{
                 echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
@@ -105,7 +105,7 @@
             mysqli_close($link);
         ?>
     <center>
-    <a href='yAddStudent(01-16-20).php?id=$id'><button class='btn-outline-danger'>Add Student</button>
+    <a href='yAddStudent(01-16-20).php?id=$id'><button class='btn-outline-success'>Add Student</button>
     </center>
         
 

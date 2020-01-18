@@ -2,108 +2,110 @@
     <html>
     
     <style>
-    body {font-family: Arial, Helvetica, sans-serif;}
-    * {box-sizing: border-box}
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box}
 
-    form{
-        border:10px solid black;
-        margin-left:30%; 
-        margin-right:30%;
-        margin-top:2%;
-    }
+        form{
+            border:10px solid black;
+            margin-left:30%; 
+            margin-right:30%;
+            margin-top:2%;
+        }
 
-    /* Full-width input fields */
-    input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-    }
-
-    input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-    }
-    h1{
-        text-align:center;
-    }
-
-    hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-    }
-
-    /* Set a style for all buttons */
-    button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-    }
-
-    button:hover {
-    opacity:4;
-    }
-
-    /* Add padding to container elements */
-    .container {
-    padding: 16px;
-    }
-
-    /* Clear floats */
-    .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-    }
-
-    a {
-    color: dodgerblue;
-    }
-
-    /* Set a grey background color and center the text of the "sign in" section */
-    .signin {
-    background-color: #f1f1f1;
-    text-align: center;
-    }
-    footer {
-        background-color: #555;
-        color: white;
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+        width: 100%;
         padding: 15px;
-    }
-    #header {
-        border:2px;
-        background-color:black;
-    }
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+        }
+
+        input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+        }
+        h1{
+            text-align:center;
+        }
+
+        hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+        }
+
+        /* Set a style for all buttons */
+        button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        }
+
+        button:hover {
+        opacity:4;
+        }
+
+        /* Add padding to container elements */
+        .container {
+        padding: 16px;
+        }
+
+        /* Clear floats */
+        .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
+
+        a {
+        color: dodgerblue;
+        }
+
+        /* Set a grey background color and center the text of the "sign in" section */
+        .signin {
+        background-color: #f1f1f1;
+        text-align: center;
+        }
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        #header {
+            border:2px;
+            background-color:black;
+        }
     </style>
+
+  
     <body>
-    <div class="container-fluid" id="header">
-        <div class="navbar-header">
-            <h3 style="text-align:center;color:white">Week 1 - PHP_Learnings</h3>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <div class="nav navbar-nav navbar-right">
-                <a href="yViewStudent(01-16-20).php"><h1  style="margin-bottom:4%"> Back </h1></a>
+        <div class="container-fluid" id="header">
+            <div class="navbar-header">
+                <h3 style="text-align:center;color:white">Week 1 - PHP_Learnings</h3>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="nav navbar-nav navbar-right">
+                    <a href="yViewStudent(01-16-20).php"><h1  style="margin-bottom:4%"> Back </h1></a>
+                </div>
             </div>
         </div>
-  </div>
-<hr>
-        <form class="form" action="editDeleteStudents(01-16-20).php" method="post">
+        <hr>
+        <form class="form" action="yUpdate(01-16-20).php" method="post">
             <div class="container">
                 <h1>Enter Student Information</h1>
                 <hr>
 
                 <label><b>First Name</b></label>
-                <input class="input"  type="text" placeholder="Enter First Name" name="first name" value="">
+                <input class="input"  type="text" placeholder="Enter First Name" name="firstname" value="">
 
                 <label><b>Last Name</b></label>
-                <input class="input"  type="text" placeholder="Enter Last Name" name="last name" value="">
+                <input class="input"  type="text" placeholder="Enter Last Name" name="lastname" value="">
 
                 <label><b>Adress</b></label>
                 <input class="input"  type="text" placeholder="Enter Address" name="address" value="">
@@ -113,12 +115,14 @@
 
                 <label><b>School</b></label>
                 <input class="input"  type="text" placeholder="Enter School" name="school" value=""><hr>
+                
+                <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
+
                 <div class="clearfix">
-                <button type="submit" class="submit">Update Student</button>
+                <button type="submit" class="submit" name="update">Update Student</button>
                 </div>
-               
+                
             </div>
         </form>
-
     </body>
 </html>

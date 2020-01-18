@@ -37,7 +37,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
     <div class="nav navbar-nav navbar-right">
-        <a href="#"><h4 class="glyphicon glyphicon-log-out" style="margin-bottom:4%"> LogOut </h4></a>
+        <a href="yLogout(01-16-20).php"><h4 class="glyphicon glyphicon-log-out" style="margin-bottom:4%"> LogOut </h4></a>
     </div>
     </div>
   </div>
@@ -134,54 +134,54 @@
                 "ph_presidents" => ["Duterte", "Marcos", "Aguinaldo"]
             ];</p>
             <?php
-            
+            $multiArray = [
+              "food"=>["Go", "Grow", "Glow"],
+              "section" => ["sectionA" => [1 => "Yubert",2 => "Yuh Ann", 3 => "Yuh Vellen", 4 => "Ubaldo", 5 => "Andrea"],
+              "sectionB" => [1 => "Joel","Richard",  "Zabdiel", "Erick", "Christoper"]],
+              "ph_presidents" => ["Duterte", "Marcos", "Aguinaldo"]
+          ];
+            displayMultidimensionalArray($multiArray);
             ?>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-3">
+        
+        <div class="col-sm-12">
           <div class="well">
-           <p>Jane</p>
-           <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
+            <p style="color:red">Using Inheritance</p>
+          <?php
+          $strawberry = new Apple("Apple", "red");
+          $strawberry->message();
+          $strawberry->intro();
+          ?>
+
+           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-3">
+        
+        <div class="col-sm-12">
           <div class="well">
-           <p>Anja</p>
-           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          <div class="thumbnail">
+        <p style="color:red">Sample CRUD using PHP with MYSQL</p>
+       
+        <p><strong></strong></p>
+        
+        <a href="yViewStudent(01-16-20).php"><button class="btn btn-primary">CRUD</button>
+      </div>    
           </div>
         </div>
       </div>     
     </div>
-    <div class="col-sm-2 well">
-      <div class="thumbnail">
-        <p>Sample CRUD using PHP with MYSQL</p>
-       
-        <p><strong></strong></p>
-        
-        <a href="yAddStudent(01-16-20).php"><button class="btn btn-primary">CRUD</button>
-      </div>      
-      
-    </div>
+    
   </div>
+  
 </div>
 
 <hr><hr>
 <footer class="container-fluid text-center">
-  <p style="color:green">PN_TRAINING_BACKEND_(PHP_LARAVEL)_WEEK1</p>
+  <p style="color:white">PN_TRAINING_BACKEND_(PHP_LARAVEL)_WEEK1</p>
 </footer>
 
 </body>
