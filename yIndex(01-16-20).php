@@ -1,3 +1,11 @@
+<?php
+    if (isset( $_SESSION["logged_in"])) {
+        if ( !$_SESSION["logged_in"]) {
+            header("Location:yLogin(01-16-20).php");
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,9 +47,9 @@
 
   <div class="row">
     <div class="col-sm-3 well">
-    <p>Sample Output</p>
+    <p style="color:green">Sample Output</p>
       <div class="well">
-        <p>Chess Board</p>
+        <p style="color:red">Chess Board</p>
         <table width="180px" border="5px">
             <?php
                 include "yCode(01-16-20).php";
@@ -52,7 +60,7 @@
       </div>
 
       <div class="well">
-        <p>Printing a Pattern</p>
+        <p style="color:red">Printing a Pattern</p>
     
         <br>
             <?php  
@@ -89,7 +97,7 @@
         <div class="col-sm-12">
           <div class="panel panel-default text-left">
             <div class="panel-body">
-            <p>Removing an Element in an array using its value<br>In this case we remove the month of January</p>
+            <p style="color:red">Removing an Element in an array using its value<br>In this case we remove the month of January</p>
            <?php
             $month = ["January", "February","March","April","May","June","July","August","September","October","November","December"];   
             removeValue('January', $month);
@@ -103,9 +111,9 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="well">
-            <p>Printing an ASSOCIATIVE ARRAY </p>
+            <p style="color:red">Printing an ASSOCIATIVE ARRAY </p>
             <hr>
-            <p>array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43")</p>
+            <p style="color:green">array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43")</p>
             <?php
               $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
               echo "Peter is " . $age['Peter'] . " years old.";
@@ -117,9 +125,9 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="well">
-            <p>Printing a MULTIDIMENSIONAL ARRAY</p>
+            <p style="color:red">Printing a MULTIDIMENSIONAL ARRAY</p>
             <hr>
-            <p>$multiArray = [
+            <p style="color:green">$multiArray = [
                 "food"=>["Go", "Grow", "Glow"],
                 "section" => ["sectionA" => [1 => "Yubert",2 => "Yuh Ann", 3 => "Yuh Vellen", 4 => "Ubaldo", 5 => "Andrea"],
                 "sectionB" => [1 => "Joel","Richard",  "Zabdiel", "Erick", "Christoper"]],
@@ -160,25 +168,20 @@
     </div>
     <div class="col-sm-2 well">
       <div class="thumbnail">
-        <p>Upcoming Events:</p>
-        <img src="paris.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Paris</strong></p>
-        <p>Fri. 27 November 2015</p>
-        <button class="btn btn-primary">Info</button>
+        <p>Sample CRUD using PHP with MYSQL</p>
+       
+        <p><strong></strong></p>
+        
+        <a href="yAddStudent(01-16-20).php"><button class="btn btn-primary">CRUD</button>
       </div>      
-      <div class="well">
-        <p>ADS</p>
-      </div>
-      <div class="well">
-        <p>ADS</p>
-      </div>
+      
     </div>
   </div>
 </div>
 
 <hr><hr>
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <p style="color:green">PN_TRAINING_BACKEND_(PHP_LARAVEL)_WEEK1</p>
 </footer>
 
 </body>

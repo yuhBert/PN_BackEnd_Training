@@ -1,6 +1,6 @@
 <?php
     session_start();
-    // // session_destroy();
+    // session_destroy();
     
     // if(!isset($_SESSION['username'])) {
     //     $_SESSION['username'] = $_POST['username'];
@@ -31,9 +31,9 @@
                     // $login = true;
                     $_SESSION["logged_in"]=true;
                     $_SESSION["user"]=$user_data["id"];
-                    header("Location:yAddStudent(01-16-20).php");
+                    header("Location:yIndex(01-16-20).php");
                 }else {
-                    $login = false;
+                    // $login = false;
                     $_SESSION["logged_in"]=false;
 
                     echo "Error 404!";

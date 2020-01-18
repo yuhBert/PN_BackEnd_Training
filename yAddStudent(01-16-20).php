@@ -1,9 +1,9 @@
 <?php
-    if (isset( $_SESSION["logged_in"])) {
-        if ( !$_SESSION["logged_in"]) {
-            header("Location:yLogin(01-16-20).php");
-        }
-    }
+    // if (isset( $_SESSION["logged_in"])) {
+    //     if ( !$_SESSION["logged_in"]) {
+    //         header("Location:yLogin(01-16-20).php");
+    //     }
+    // }
 ?>
 <!DOCTYPE html>
     <html>
@@ -79,30 +79,49 @@
     background-color: #f1f1f1;
     text-align: center;
     }
+    footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+    }
+    #header {
+        border:2px;
+        background-color:black;
+    }
     </style>
     <body>
-
-        <form class="form" action="editDeleteStudents(01-16-20).php" method="post">
+        <div class="container-fluid" id="header">
+            <div class="navbar-header">
+                <h3 style="text-align:center;color:white">Week 1 - PHP_Learnings</h3>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="nav navbar-nav navbar-right">
+                    <a href="yIndex(01-16-20).php"><h1  style="margin-bottom:4%"> Back </h1></a>
+                </div>
+            </div>
+        </div>
+  <hr>
+        <form class="form" action="yAdd(01-16-20).php" method="post">
             <div class="container">
                 <h1>Enter Student Information</h1>
                 <hr>
 
                 <label><b>First Name</b></label>
-                <input class="input"  type="text" placeholder="Enter First Name" name="first name" value="">
+                <input class="input"  type="text" placeholder="Enter First Name" name="firstname" value="" required>
 
                 <label><b>Last Name</b></label>
-                <input class="input"  type="text" placeholder="Enter Last Name" name="last name" value="">
+                <input class="input"  type="text" placeholder="Enter Last Name" name="lastname" value="" required>
 
                 <label><b>Adress</b></label>
-                <input class="input"  type="text" placeholder="Enter Address" name="address" value="">
+                <input class="input"  type="text" placeholder="Enter Address" name="address" value="" required>
 
                 <label><b>Course</b></label>
-                <input class="input" type="text" placeholder="Enter Course" name="course" value="">
+                <input class="input" type="text" placeholder="Enter Course" name="course" value="" required>
 
                 <label><b>School</b></label>
-                <input class="input"  type="text" placeholder="Enter School" name="school" value=""><hr>
+                <input class="input"  type="text" placeholder="Enter School" name="school" value="" required><hr>
                 <div class="clearfix">
-                <button type="submit" class="submit">Add Student</button>
+                <button type="submit" class="submit" name="addStudent">Add Student</button>
                 </div>
                
             </div>

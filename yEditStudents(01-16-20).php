@@ -72,9 +72,28 @@
     background-color: #f1f1f1;
     text-align: center;
     }
+    footer {
+        background-color: #555;
+        color: white;
+        padding: 15px;
+    }
+    #header {
+        border:2px;
+        background-color:black;
+    }
     </style>
     <body>
-
+    <div class="container-fluid" id="header">
+        <div class="navbar-header">
+            <h3 style="text-align:center;color:white">Week 1 - PHP_Learnings</h3>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="nav navbar-nav navbar-right">
+                <a href="yViewStudent(01-16-20).php"><h1  style="margin-bottom:4%"> Back </h1></a>
+            </div>
+        </div>
+  </div>
+<hr>
         <form class="form" action="editDeleteStudents(01-16-20).php" method="post">
             <div class="container">
                 <h1>Enter Student Information</h1>
