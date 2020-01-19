@@ -13,7 +13,7 @@
           
         if(empty($fname) || empty($lname) || empty($address) || empty($course) || empty($school)) {                
         
-                echo "<font color='red'>Name field is empty.</font><br/>";
+                echo "<font color='red'>field is empty.</font><br/>";
         } else {    
             $updatedata=new Db();
             $sql=$updatedata->update($fname,$lname,$address,$course,$school,$id);

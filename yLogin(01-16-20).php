@@ -93,10 +93,10 @@
                 <hr>
 
                 <label><b>User Name</b></label>
-                <input class="input"  type="text" placeholder="Enter User Name" name="username" value="">
+                <input class="input"  type="text" placeholder="Enter User Name" name="username" value="" required>
 
                 <label><b>Password</b></label>
-                <input class="input" type="password" placeholder="Enter Password" name="password"value="">
+                <input class="input" type="password" placeholder="Enter Password" name="password"value="" required>
                 <hr>
 
                 <div class="clearfix">

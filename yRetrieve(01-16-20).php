@@ -36,7 +36,10 @@
                     // $login = false;
                     $_SESSION["logged_in"]=false;
 
-                    echo "Error 404!";
+                    // echo "Error 404!";
+                    $message = "No result found! We are not able to find your account. Try loging in again";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+                    header("refresh:0.5; url=yLogin(01-16-20).php");
                 }
             }else {
                 $message = "No result found! We are not able to find your account. Try loging in again";

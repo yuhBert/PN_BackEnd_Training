@@ -102,19 +102,19 @@
                 <hr>
 
                 <label><b>First Name</b></label>
-                <input class="input"  type="text" placeholder="Enter First Name" name="firstname" value="">
+                <input class="input"  type="text" placeholder="Enter First Name" name="firstname" value="" required>
 
                 <label><b>Last Name</b></label>
-                <input class="input"  type="text" placeholder="Enter Last Name" name="lastname" value="">
+                <input class="input"  type="text" placeholder="Enter Last Name" name="lastname" value="" required>
 
                 <label><b>Adress</b></label>
-                <input class="input"  type="text" placeholder="Enter Address" name="address" value="">
+                <input class="input"  type="text" placeholder="Enter Address" name="address" value="" required> 
 
                 <label><b>Course</b></label>
-                <input class="input" type="text" placeholder="Enter Course" name="course" value="">
+                <input class="input" type="text" placeholder="Enter Course" name="course" value="" required>
 
                 <label><b>School</b></label>
-                <input class="input"  type="text" placeholder="Enter School" name="school" value=""><hr>
+                <input class="input"  type="text" placeholder="Enter School" name="school" value="" required><hr>
                 
                 <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
 
